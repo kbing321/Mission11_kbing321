@@ -3,6 +3,7 @@
 
 @model BooksViewModel
 
+@*create cards for each book and its info*@
 @foreach (var b in Model.Books)
 {
 <div class="card card-outline-primary m-1 p-1">
@@ -22,6 +23,8 @@
     <div class="card-text p-1">Page Count: @b.PageCount</div>
 </div>
 }
+
+@*div for the page buttons*@
 <div page-model="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
           page-class="btn" page-class-normal="btn-outline-dark"
           page-class-selected="btn-primary" class="btn-group pull-right m-1">

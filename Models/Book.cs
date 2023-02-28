@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Mission09_kbing321.Models
 {
+    // model for the books
     public partial class Book
     {
         [Key]

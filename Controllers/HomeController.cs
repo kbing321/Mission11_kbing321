@@ -18,10 +18,12 @@ namespace Mission09_kbing321.Controllers
         }
         public IActionResult Index(int pageNum = 1)
         {
+            // set number of books to be displayed on one page
             int pageSize = 10;
 
             var bvm = new BooksViewModel
             {
+                // query the books based on title, page number, and page size
                 Books = repo.Books
                 .OrderBy(p => p.Title)
                 .Skip((pageNum - 1) * pageSize)

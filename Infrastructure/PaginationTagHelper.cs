@@ -26,6 +26,7 @@ namespace Mission09_kbing321.Infrastructure
         [HtmlAttributeNotBound]
         public ViewContext vc { get; set; }
         
+        // create tag attributes for html
         public PageInfo PageModel { get; set; }
         public string PageAction { get; set; }
         public bool PageClassesEnabled { get; set; } = false;
@@ -33,6 +34,7 @@ namespace Mission09_kbing321.Infrastructure
         public string PageClassNormal { get; set; }
         public string PageClassSelected { get; set; }
 
+        // create tag helpers to create page number list under the display of books
         public override void Process (TagHelperContext thc, TagHelperOutput tho)
         {
             IUrlHelper uh = uhf.GetUrlHelper(vc);
