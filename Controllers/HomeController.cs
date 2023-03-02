@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mission09_kbing321.Models;
 using Mission09_kbing321.Models.ViewModels;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Mission09_kbing321.Controllers
 {
@@ -12,7 +9,7 @@ namespace Mission09_kbing321.Controllers
     {
         private IBookstoreRepository repo;
 
-        public HomeController (IBookstoreRepository br)
+        public HomeController(IBookstoreRepository br)
         {
             repo = br;
         }

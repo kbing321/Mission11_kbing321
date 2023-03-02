@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Mission09_kbing321.Models.ViewModels
 {
@@ -12,6 +9,6 @@ namespace Mission09_kbing321.Models.ViewModels
         public int CurrentPage { get; set; }
 
         //figure out how many pages needed
-        public int TotalPages => (int) Math.Ceiling((double) TotalNumBooks / BooksPerPage);
+        public int TotalPages => (int)Math.Ceiling((double)TotalNumBooks / BooksPerPage);
     }
 }

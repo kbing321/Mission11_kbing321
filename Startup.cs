@@ -1,15 +1,10 @@
-using Mission09_kbing321.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Mission09_kbing321.Models;
 
 namespace Mission09_kbing321
 {
@@ -20,7 +15,7 @@ namespace Mission09_kbing321
 
         public IConfiguration Configuration { get; set; }
 
-        public Startup (IConfiguration config)
+        public Startup(IConfiguration config)
         {
             Configuration = config;
         }

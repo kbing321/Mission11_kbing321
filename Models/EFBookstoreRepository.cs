@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Mission09_kbing321.Models
 {
@@ -9,7 +6,7 @@ namespace Mission09_kbing321.Models
     {
         private BookstoreContext context { get; set; }
 
-        public EFBookstoreRepository (BookstoreContext bc)
+        public EFBookstoreRepository(BookstoreContext bc)
         {
             context = bc;
         }

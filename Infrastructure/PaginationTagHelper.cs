@@ -4,10 +4,6 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Mission09_kbing321.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Mission09_kbing321.Infrastructure
 {
@@ -25,7 +21,7 @@ namespace Mission09_kbing321.Infrastructure
         [ViewContext]
         [HtmlAttributeNotBound]
         public ViewContext vc { get; set; }
-        
+
         // create tag attributes for html
         public PageInfo PageModel { get; set; }
         public string PageAction { get; set; }
@@ -35,7 +31,7 @@ namespace Mission09_kbing321.Infrastructure
         public string PageClassSelected { get; set; }
 
         // create tag helpers to create page number list under the display of books
-        public override void Process (TagHelperContext thc, TagHelperOutput tho)
+        public override void Process(TagHelperContext thc, TagHelperOutput tho)
         {
             IUrlHelper uh = uhf.GetUrlHelper(vc);
 
