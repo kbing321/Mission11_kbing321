@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Mission09_kbing321.Models.ViewModels
+namespace Mission10_kbing321.Models.ViewModels
 {
     public class BooksViewModel
     {

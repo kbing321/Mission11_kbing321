@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Mission09_kbing321
+namespace Mission10_kbing321
 {
     public class Program
     {

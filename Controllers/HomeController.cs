@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mission09_kbing321.Models;
-using Mission09_kbing321.Models.ViewModels;
+using Mission10_kbing321.Models;
+using Mission10_kbing321.Models.ViewModels;
 using System.Linq;
 
-namespace Mission09_kbing321.Controllers
+namespace Mission10_kbing321.Controllers
 {
     public class HomeController : Controller
     {

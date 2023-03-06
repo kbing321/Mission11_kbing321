@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Mission09_kbing321.Models;
+using Mission10_kbing321.Models;
 
-namespace Mission09_kbing321
+namespace Mission10_kbing321
 {
     public class Startup
     {

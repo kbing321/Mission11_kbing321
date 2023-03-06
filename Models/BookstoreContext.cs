@@ -4,7 +4,7 @@
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace Mission09_kbing321.Models
+namespace Mission10_kbing321.Models
 {
     public class BookstoreContext : DbContext
     {
