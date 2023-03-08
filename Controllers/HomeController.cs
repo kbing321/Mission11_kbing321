@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mission10_kbing321.Models;
-using Mission10_kbing321.Models.ViewModels;
+using Mission09_kbing321.Models;
+using Mission09_kbing321.Models.ViewModels;
 using System.Linq;
 
-namespace Mission10_kbing321.Controllers
+namespace Mission09_kbing321.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,7 +13,7 @@ namespace Mission10_kbing321.Controllers
         {
             repo = br;
         }
-        public IActionResult Index(int pageNum = 1)
+        public IActionResult Index(string bookCategory, int pageNum = 1)
         {
             // set number of books to be displayed on one page
             int pageSize = 10;
@@ -22,13 +22,17 @@ namespace Mission10_kbing321.Controllers
             {
                 // query the books based on title, page number, and page size
                 Books = repo.Books
+                .Where(p => (p.Category == bookCategory) || (bookCategory == null))
                 .OrderBy(p => p.Title)
                 .Skip((pageNum - 1) * pageSize)
                 .Take(pageSize),
 
                 PageInfo = new PageInfo
                 {
-                    TotalNumBooks = repo.Books.Count(),
+                    TotalNumBooks = 
+                    (bookCategory == null 
+                        ? repo.Books.Count() 
+                        : repo.Books.Where(x => x.Category == bookCategory).Count()),
                     BooksPerPage = pageSize,
                     CurrentPage = pageNum
                 }

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Mission10_kbing321.Models
+namespace Mission09_kbing321.Models
 {
     public class EFBookstoreRepository : IBookstoreRepository
     {
