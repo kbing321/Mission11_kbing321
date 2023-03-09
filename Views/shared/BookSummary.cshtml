@@ -3,9 +3,10 @@
 @model Book
 
 <div class="card card-outline-primary m-1 p-1">
+    @*<img src="" class="card-img-top" />*@
     <div class="bg-light p-1">
         <h4>
-            @Model.Title
+            <span class="font-italic">@Model.Title</span>
             <span class="badge badge-pill badge-primary" style="float:right">
                 <small>@Model.Price.ToString("c")</small>
             </span>
@@ -23,9 +24,11 @@
     </div>
     <form method="post" asp-page="/BuyBooks">
         <input type="hidden" asp-for="@Model.BookId" />
-        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <span class="card-text">
-            <button type="submit" class="btn btn-success btn-sm float-right">Add to Cart</button>
+            <button type="submit" class="btn btn-success btn-sm float-right" data-toggle="tooltip" title="This will automatically add @Model.Title and take you to your cart.">
+                Add to Cart
+            </button>
         </span>
     </form>
 </div>
